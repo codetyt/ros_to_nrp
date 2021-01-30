@@ -23,8 +23,8 @@ int c = 0;
 double* calc_angular(cpg_to_cdp1::MyMuscleStates mmstates) {
     geometry_msgs::Vector3 F[2], R[2], H[2];
     F[0] = mmstates.muscles[0].path_points[0]; F[1] = mmstates.muscles[0].path_points[2];
-    R[0] = mmstates.muscles[2].path_points[0]; F[1] = mmstates.muscles[2].path_points[1];
-    H[0] = mmstates.muscles[4].path_points[0]; F[1] = mmstates.muscles[4].path_points[3];
+    R[0] = mmstates.muscles[2].path_points[0]; R[1] = mmstates.muscles[2].path_points[1];
+    H[0] = mmstates.muscles[4].path_points[1]; H[1] = mmstates.muscles[4].path_points[3];
      
     static double angular[3];
     for (int i=0; i<3; i++) { angular[i] = 0.0; }
@@ -64,7 +64,7 @@ void topicCallback(const cpg_to_cdp1::MyMuscleStates mmstates)
     //   for (int j=0; j<(int)pps.size(); j++) {
     //     cout << pps[j].x << " " <<  pps[j].y << " " << pps[j].z << endl;
     //   }
-    //   cout << pps[0].x " " << pps[0].y << " " << pps[0].z << " " << f <<  " " << l << " " << dl << endl << endl << endl;
+    //   cout << pps[0].x << " " << pps[0].y << " " << pps[0].z << " " << f <<  " " << l << " " << dl << endl << endl << endl;
     // }
 
     // show angular & angular_velocity
@@ -75,7 +75,7 @@ void topicCallback(const cpg_to_cdp1::MyMuscleStates mmstates)
       angular_pre[i] = angular[i];
     }
 
-    // show Foot terminal position
+    // // show Foot terminal position
     cout <<  mmstates.muscles[0].path_points[2].y;
     cout << endl;
 }
