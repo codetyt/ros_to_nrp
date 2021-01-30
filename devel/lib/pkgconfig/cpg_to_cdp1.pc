@@ -1,0 +1,8 @@
+prefix=/home/yamada/ROS_to_NRP/devel
+
+Name: cpg_to_cdp1
+Description: Description of cpg_to_cdp1
+Version: 0.0.0
+Cflags: -I/home/yamada/ROS_to_NRP/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

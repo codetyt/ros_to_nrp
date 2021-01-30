@@ -1,0 +1,6 @@
+<launch>
+  <group ns="cpg_to_cdp1">
+    <node pkg="cpg_to_cdp1" name="MS_subscriber" type="MS_subscriber"/>
+    <node pkg="cpg_to_cdp1" name="brain_model" type="brain_model"/>
+  </group>
+</launch>

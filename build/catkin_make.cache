@@ -1,0 +1,2 @@
+cpg_to_cdp1
+-DCATKIN_DEVEL_PREFIX=/home/yamada/ROS_to_NRP/devel -DCMAKE_INSTALL_PREFIX=/home/yamada/ROS_to_NRP/install -G Unix Makefiles
